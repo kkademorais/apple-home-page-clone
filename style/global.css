@@ -4,6 +4,8 @@
     --title-primary-color: #F5F5F7;
     --subtitle-color: #6E6E73;
     --links-button-color: #2997FF;
+    --spirited-main-color: #ded2b9;
+    --text-dark: #1d1d1f;
 }
 
 header {
@@ -34,8 +36,33 @@ header nav ul li {
     cursor: pointer;
     list-style: none;
 }
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
 main section {
     text-align: center;
+    position: relative;
+}
+
+main section img {
+    width: 100%;
+    height: auto;
+}
+
+main section a {
+    color: var(--links-button-color);
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+main section a:hover {
+    text-decoration: underline;
 }
 
 main .Main-section h1 {
@@ -59,18 +86,6 @@ main section sub {
     font-size: 0.9rem;
 }
 
-main section a {
-    color: var(--links-button-color);
-    line-height: 1.8rem;
-    font-size: 1.2rem;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-main section a:hover {
-    text-decoration: underline;
-}
-
 main section .text-wrapper {
     position: absolute;
     left: 50%;
@@ -81,7 +96,78 @@ main section .text-wrapper {
     margin-top: 51px;
 }
 
-main section img {
+main .Spirited-section > div {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);   
+}
+
+main .Spirited-section > div:last-child {
+    bottom: 50px;
+}
+
+main .Spirited-section > div:first-child {
+    top: 105px;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    height: auto;
+    max-width: 60%;
+}
+
+main .Spirited-section > div:first-child p {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 2.5rem;
+    color: var(--spirited-main-color);
+    letter-spacing: -0.6px;
+}
+
+main .Spirited-section p {
+    color: var(--title-primary-color);
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.11px;
+}
+
+main .Spirited-section span {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    display: block;
+    letter-spacing: 0.23px;
+
+}
+
+main .iPhone-section h2 {
+    color: var(--text-dark);
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 4rem;
+    letter-spacing: -0.28px;
+}
+
+main .iPhone-section p {
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 2rem;
+    letter-spacing: 0.11px;
+    margin-bottom: 1rem;
+}
+
+main .iPhone-section .link-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+main section .text-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 51px;
 }
